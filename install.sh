@@ -32,13 +32,13 @@ then
 	sed '$aACTION=="add", ENV{ID_BUS}=="usb", ENV{ID_MODEL}=="USB_Serial",          ENV{VE_SERVICE}="epeverSolarcharger"' /etc/udev/rules.d/serial-starter.rules
 
 	echo "Install driver"
-	chmod +x /dbus-epever-tracer/driver/start-dbus-epever-tracer.sh
-	chmod +x /dbus-epever-tracer/driver/dbus-epever-tracer.py
-	chmod +x /dbus-epever-tracer/service/run
-	chmod +x /dbus-epever-tracer/service/log/run
+	chmod +x /data/dbus-epever-tracer/driver/start-dbus-epever-tracer.sh
+	chmod +x /data/dbus-epever-tracer/driver/dbus-epever-tracer.py
+	chmod +x /data/dbus-epever-tracer/service/run
+	chmod +x /data/dbus-epever-tracer/service/log/run
 
-	ln -s data/dbus-epever-tracer/driver/ /opt/victronenergy/dbus-epever-tracer/
-	ln -s data/dbus-epever-tracer/service/ /opt/victronenergy/service-templates/dbus-epever-tracer/
+	ln -s /data/dbus-epever-tracer/driver/ /opt/victronenergy/dbus-epever-tracer/
+	ln -s /data/dbus-epever-tracer/service/ /opt/victronenergy/service-templates/dbus-epever-tracer/
 
 	echo "To finish, reboot the Venus OS device"
 fi
