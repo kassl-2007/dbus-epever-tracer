@@ -37,8 +37,8 @@ then
 	chmod +x /data/dbus-epever-tracer/service/run
 	chmod +x /data/dbus-epever-tracer/service/log/run
 
-	ln -s /data/dbus-epever-tracer/driver/ /opt/victronenergy/dbus-epever-tracer/
-	ln -s /data/dbus-epever-tracer/service/ /opt/victronenergy/service-templates/dbus-epever-tracer/
+	ln -s /data/dbus-epever-tracer/driver /opt/victronenergy/dbus-epever-tracer
+	ln -s /data/dbus-epever-tracer/service /opt/victronenergy/service-templates/dbus-epever-tracer
 
 	echo "To finish, reboot the Venus OS device"
 fi
