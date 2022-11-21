@@ -26,6 +26,9 @@ then
 	mkdir -p dbus-epever-tracer/ext/velib_python
     	cp -R dbus-epever-tracer-master/* dbus-epever-tracer
 	cp -R velib_python-master/* dbus-epever-tracer/ext/velib_python
+	
+	rm -r velib_python-master
+	rm -r dbus-epever-tracer-master
 
 	echo "Add entries to serial-starter"
 	cd ..
