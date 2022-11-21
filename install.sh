@@ -28,7 +28,7 @@ then
 	cp -R velib_python-master/* dbus-epever-tracer/ext/velib_python
 
 	echo "Add entries to serial-starter"
-	cd /
+	cd ..
 	sed -i  '/service.*imt.*dbus-imt-si-rs485tc/a service epever		dbus-epever-tracer' /etc/venus/serial-starter.conf
 	sed 'ACTION=="add", ENV{ID_BUS}=="usb", ENV{ID_MODEL}=="USB_Serial",          ENV{VE_SERVICE}="epever"' /etc/udev/rules.d/serial-starter.rules
 
