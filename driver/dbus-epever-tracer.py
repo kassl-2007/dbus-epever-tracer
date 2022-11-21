@@ -137,7 +137,7 @@ class DbusEpever(object):
                 c3100[0] = 1
 
             self._dbusservice['/Dc/0/Voltage'] = c3100[4]/100
-            self._dbusservice['/Dc/0/Current'] = (c3100[5]-c3100[9])/100.0
+            self._dbusservice['/Dc/0/Current'] = c3100[5]/100.0
             self._dbusservice['/Dc/0/Temperature'] = c3100[16]/100
             self._dbusservice['/Pv/V'] = c3100[0]/100
             self._dbusservice['/Yield/Power'] =round((c3100[2] | c3100[3] << 8)/100)
